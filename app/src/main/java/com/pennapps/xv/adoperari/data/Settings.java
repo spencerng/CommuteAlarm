@@ -29,4 +29,15 @@ public class Settings extends PreferenceFragment{
         return sp.getBoolean("isSetup", false);
     }
 
+    //In minutes
+    public void setPrepTime(int prepTime){
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt("prepTime", prepTime);
+        editor.apply();
+    }
+
+    public int getPrepTime(){
+        return sp.getInt("prepTime", 5);
+    }
+
 }

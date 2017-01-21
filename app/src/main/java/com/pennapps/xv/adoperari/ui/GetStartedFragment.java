@@ -7,6 +7,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.pennapps.xv.adoperari.R;
 import com.pennapps.xv.adoperari.models.Alarm;
@@ -15,6 +16,7 @@ import com.pennapps.xv.adoperari.models.Alarm;
 public class GetStartedFragment extends Fragment {
 
     Alarm firstAlarm;
+    Button nextButton;
 
     public GetStartedFragment() {
         // Required empty public constructor
@@ -33,7 +35,14 @@ public class GetStartedFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        nextButton = (Button) getActivity().findViewById(R.id.getStartedButton);
 
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager().beginTransaction().replace(android.R.id.content, PickLocationFragment.newInstance(firstAlarm), "PICK_PLACE").commit();
+            }
+        });
     }
 
     @Override

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_alarm_icon"
+        android:onClick="onAddAlarmClick"
+        android:icon="@drawable/add_alarm_icon"
+        app:showAsAction="ifRoom"
+        android:title="Add Alarm">
+    </item>
+    <item
+        android:id="@+id/miProfile"
+
+        android:title="Settings">
+    </item>
+</menu>
