@@ -17,6 +17,8 @@
         android:id="@+id/pickTimeFragment"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="111dp" />
+        android:layout_marginTop="111dp"
+        android:textColor="@color/colorText"
+        android:backgroundTint="@color/colorAccent" />
 
 </RelativeLayout>
