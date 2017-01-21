@@ -6,14 +6,7 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:id="@+id/test"
-        android:text="This is the main activity"
-        android:textColor="#ffffff"/>
-=======
-        >
->>>>>>> 661bd3d73f95c624beef63f767497c48df7b1a00
+        android:layout_height="wrap_content">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -30,6 +23,7 @@
             app:tabMode="fixed"
             app:tabGravity="fill"/>
     </android.support.design.widget.AppBarLayout>
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"

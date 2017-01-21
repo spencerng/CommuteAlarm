@@ -9,14 +9,15 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-<<<<<<< HEAD
+
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
-=======
+
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
->>>>>>> 661bd3d73f95c624beef63f767497c48df7b1a00
+
 
 import com.pennapps.xv.adoperari.R;
 import com.pennapps.xv.adoperari.data.Settings;
@@ -37,12 +38,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
-       if(!Settings.getInstance(getBaseContext()).isSetup()){
-=======
 
         /*if(!Settings.getInstance(getBaseContext()).isSetup()){
->>>>>>> 661bd3d73f95c624beef63f767497c48df7b1a00
             Intent i = new Intent(MainActivity.this, GetStartedActivity.class);
             startActivity(i);
             finish();
@@ -93,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             mFragmentTitleList.add(title);
         }
 
-<<<<<<< HEAD
+
 
         /*final boolean[] days = {true,false,false,false,false,false,false};
         final TextView timeDisplay = (TextView) findViewById(R.id.test);
@@ -126,16 +123,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-=======
         @Override
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
->>>>>>> 661bd3d73f95c624beef63f767497c48df7b1a00
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_activity_menu, menu);
-        return true;}
+        return true;
+    }
+
+    public void onAddAlarmClick(MenuItem mi){
+        Intent i = new Intent(MainActivity.this, AddAlarmActivity.class);
+        startActivity(i);
+        finish();
+    }
 }
