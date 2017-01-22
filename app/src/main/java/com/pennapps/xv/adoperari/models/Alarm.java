@@ -28,16 +28,16 @@ public class Alarm {
         this.workLocation = workLocation;
     }
 
-    public Ringtone getRingtone() {
+   /* public Ringtone getRingtone() {
         return ringtone;
     }
 
     public void setRingtone(Ringtone ringtone) {
         this.ringtone = ringtone;
-    }
+    }*/
 
 
-    public Alarm(Time time, Place workLocation, Ringtone ringtone) {
+    public Alarm(Time time, Place workLocation/*, Ringtone ringtone*/) {
         this.time = time;
         this.workLocation = workLocation;
         this.ringtone = ringtone;
@@ -51,6 +51,16 @@ public class Alarm {
     Time time;
     Place workLocation;
     Ringtone ringtone;
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    boolean enabled = true;
 
     //In minutes
     ArrayList<DayTracker> leaveHouseTimes = new ArrayList<>();

@@ -6,15 +6,19 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/ic_action_name"
+        android:background="@drawable/mood_bad"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sadDrawable"/>
 
     <TextView
+        android:layout_below="@+id/sadDrawable"
         android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:text="Sorry! Please try again after making an account."
-        android:layout_marginTop="350dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="Sorry! Please try again after setting up an alarm"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="18dp"/>
 
 </RelativeLayout>
