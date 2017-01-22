@@ -12,17 +12,10 @@ import android.widget.Button;
 import com.pennapps.xv.adoperari.R;
 import com.pennapps.xv.adoperari.models.Alarm;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link PickLocationFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link PickLocationFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class PickLocationFragment extends Fragment {
     Alarm firstAlarm;
-    Button nextButton;
+    Button pickLocationButton;
 
     public PickLocationFragment() {
         // Required empty public constructor
@@ -41,12 +34,12 @@ public class PickLocationFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        nextButton = (Button) getActivity().findViewById(R.id.getStartedButton);
+        pickLocationButton = (Button) getActivity().findViewById(R.id.pickLocationButton);
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        pickLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //getFragmentManager().beginTransaction().replace(android.R.id.content, PickLocationFragment.)
+                //Launch activity here
             }
         });
     }
