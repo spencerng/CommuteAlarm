@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button"
+
+        android:gravity="center_vertical|center_horizontal"
+        android:text="S"
+        android:textSize="18dp"
+        android:id="@+id/sunButton"
+        android:layout_margin="3dp"
+        android:textColor="#fff"
+        />
+    <Button
+        android:layout_margin="3dp"
+        android:layout_toRightOf="@id/sunButton"
+        android:id="@+id/monButton"
+        android:text="M"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="18dp"
+        android:textColor="#fff" />
+
+    <Button
+        android:layout_margin="3dp"
+        android:layout_toRightOf="@id/monButton"
+        android:id="@+id/tuesButton"
+        android:text="T"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="18dp"
+        android:textColor="#fff" />
+    <Button
+        android:layout_margin="3dp"
+        android:layout_toRightOf="@id/tuesButton"
+        android:id="@+id/wedButton"
+        android:text="W"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="18dp"
+        android:textColor="#fff" />
+    <Button
+        android:layout_margin="3dp"
+        android:layout_toRightOf="@id/wedButton"
+        android:id="@+id/thursButton"
+        android:text="T"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="18dp"
+        android:textColor="#fff" />
+    <Button
+        android:layout_margin="3dp"
+        android:layout_toRightOf="@id/thursButton"
+        android:id="@+id/friButton"
+        android:text="F"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="18dp"
+        android:textColor="#fff" />
+    <Button
+        android:layout_margin="3dp"
+        android:layout_toRightOf="@id/friButton"
+        android:id="@+id/satButton"
+        android:text="S"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="18dp"
+        android:textColor="#fff" />
+
+</RelativeLayout>

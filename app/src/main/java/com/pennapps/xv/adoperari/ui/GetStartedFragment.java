@@ -40,7 +40,7 @@ public class GetStartedFragment extends Fragment {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getFragmentManager().beginTransaction().replace(android.R.id.content, PickLocationFragment.newInstance(firstAlarm), "PICK_PLACE").commit();
+                //getFragmentManager().beginTransaction().replace(android.R.id.content, PickLocationFragment.newInstance(firstAlarm), "PICK_PLACE").commit();
             }
         });
     }

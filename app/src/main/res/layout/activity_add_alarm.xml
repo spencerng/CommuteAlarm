@@ -10,4 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.pennapps.xv.adoperari.ui.AddAlarmActivity">
 
+    <com.pennapps.xv.adoperari.ui.views.DaysOfWeekPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.pennapps.xv.adoperari.ui.views.DaysOfWeekPicker>
+
 </RelativeLayout>
