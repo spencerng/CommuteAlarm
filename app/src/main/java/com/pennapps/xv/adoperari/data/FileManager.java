@@ -37,6 +37,18 @@ public class FileManager {
 
     }
 
+    public static void addSaveAlarm(Alarm alarm, Context c){
+        ArrayList<Alarm> alarmList;
+        try{
+            alarmList = loadAlarmList(c);
+
+        }catch(IOException e){
+            alarmList = new ArrayList<>();
+        }
+        alarmList.add(alarm);
+        saveAlarmList(alarmList, c);
+    }
+
     public static void saveFile(String fileContents, String fileName, Context c){
         try {
             FileOutputStream fos = c.openFileOutput(fileName, Context.MODE_PRIVATE);

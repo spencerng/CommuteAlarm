@@ -37,10 +37,10 @@ public class Alarm {
     }*/
 
 
-    public Alarm(Time time, Place workLocation/*, Ringtone ringtone*/) {
+    public Alarm(Time time, Place workLocation,int  prepareTime/*, Ringtone ringtone*/) {
         this.time = time;
         this.workLocation = workLocation;
-        this.ringtone = ringtone;
+        this.prepareTime = prepareTime;
 
         for(int i = 0; i < 7; i++){
             leaveHouseTimes.add(new DayTracker());
@@ -51,6 +51,16 @@ public class Alarm {
     Time time;
     Place workLocation;
     Ringtone ringtone;
+
+    public int getPrepareTime() {
+        return prepareTime;
+    }
+
+    public void setPrepareTime(int prepareTime) {
+        this.prepareTime = prepareTime;
+    }
+
+    int prepareTime;
 
     public boolean isEnabled() {
         return enabled;
