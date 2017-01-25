@@ -24,7 +24,7 @@ public class FileManager {
 
     public static final String ALARM_LIST_FILENAME = "Alarm List.json";
 
-    public static ArrayList<Alarm> loadAlarmList(Context c){
+    public static ArrayList<Alarm> loadAlarmList(Context c) throws IOException{
         Type listEntries = new TypeToken<List<Alarm>>(){}.getType();
         Gson gson= new Gson();
         return gson.fromJson(readFile(ALARM_LIST_FILENAME, c), listEntries);
@@ -37,6 +37,18 @@ public class FileManager {
 
     }
 
+    public static void addSaveAlarm(Alarm alarm, Context c){
+        ArrayList<Alarm> alarmList;
+        try{
+            alarmList = loadAlarmList(c);
+
+        }catch(IOException e){
+            alarmList = new ArrayList<>();
+        }
+        alarmList.add(alarm);
+        saveAlarmList(alarmList, c);
+    }
+
     public static void saveFile(String fileContents, String fileName, Context c){
         try {
             FileOutputStream fos = c.openFileOutput(fileName, Context.MODE_PRIVATE);
@@ -47,8 +59,8 @@ public class FileManager {
         }
     }
 
-    public static String readFile(String fileName, Context c){
-        try {
+    public static String readFile(String fileName, Context c) throws IOException{
+
 
             FileInputStream fis = c.openFileInput(fileName);
 
@@ -62,10 +74,8 @@ public class FileManager {
             reader.close();
             return data;
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+
+
     }
 
 }

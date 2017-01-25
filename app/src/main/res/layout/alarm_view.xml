@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/black_border"
+
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayTimeDisplay">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:59"
+        android:textColor="#000000"
+        android:textSize="35dp"
+        android:id="@+id/timeDisplay"
+        android:padding="3dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AM"
+        android:layout_toRightOf="@id/timeDisplay"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
+        android:padding="2dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:id="@+id/amPmDisplay"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeDisplay"
+        android:textColor="@color/wallet_hint_foreground_holo_light"
+        android:text="Mon, Tue"
+        android:textSize="18dp"
+        android:paddingLeft="3dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/dayWeekDisplay"/>
+
+        <com.rey.material.widget.Switch
+            style="@style/Material.Widget.Switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:checked="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:sw_trackColor="@color/place_autocomplete_search_hint"
+            app:sw_thumbColor="@color/colorAccent"
+            android:id="@+id/alarmEnabled"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dayTimeDisplay">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/location_icon"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/locationIcon"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/locationIcon"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="100 Technology Drive, Edison, New Jersey"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:id="@+id/locationDisplay"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
