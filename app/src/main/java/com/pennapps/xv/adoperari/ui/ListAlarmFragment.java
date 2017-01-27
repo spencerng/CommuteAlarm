@@ -9,12 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pennapps.xv.adoperari.R;
 import com.pennapps.xv.adoperari.data.FileManager;
 import com.pennapps.xv.adoperari.models.Alarm;
 import com.pennapps.xv.adoperari.ui.views.AlarmView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ListAlarmFragment extends Fragment {
@@ -38,6 +40,11 @@ public class ListAlarmFragment extends Fragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -47,6 +54,8 @@ public class ListAlarmFragment extends Fragment {
 
             int lastId = 0;
             boolean firstTime = true;
+
+            Toast.makeText(getContext(), Integer.toString(alarms.size()),Toast.LENGTH_SHORT).show();
 
             for (Alarm alarm : alarms) {
                 AlarmView av = new AlarmView(getContext(), null);
@@ -65,7 +74,7 @@ public class ListAlarmFragment extends Fragment {
 
             }
         }
-        catch(Exception e){
+        catch(IOException e){
             e.printStackTrace();
             return inflater.inflate(R.layout.sad, container, false);
         }

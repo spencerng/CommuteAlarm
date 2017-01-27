@@ -20,11 +20,11 @@ public class Alarm {
         this.time = time;
     }
 
-    public Place getWorkLocation() {
+    public WorkLocation getWorkLocation() {
         return workLocation;
     }
 
-    public void setWorkLocation(Place workLocation) {
+    public void setWorkLocation(WorkLocation workLocation) {
         this.workLocation = workLocation;
     }
 
@@ -37,7 +37,7 @@ public class Alarm {
     }*/
 
 
-    public Alarm(Time time, Place workLocation,int  prepareTime/*, Ringtone ringtone*/) {
+    public Alarm(Time time, WorkLocation workLocation,int  prepareTime/*, Ringtone ringtone*/) {
         this.time = time;
         this.workLocation = workLocation;
         this.prepareTime = prepareTime;
@@ -49,8 +49,8 @@ public class Alarm {
     }
 
     Time time;
-    Place workLocation;
-    Ringtone ringtone;
+    WorkLocation workLocation;
+    int prepareTime;
 
     public int getPrepareTime() {
         return prepareTime;
@@ -60,7 +60,7 @@ public class Alarm {
         this.prepareTime = prepareTime;
     }
 
-    int prepareTime;
+
 
     public boolean isEnabled() {
         return enabled;
