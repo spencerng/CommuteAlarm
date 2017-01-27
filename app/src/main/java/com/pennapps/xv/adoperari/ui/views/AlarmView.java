@@ -59,7 +59,7 @@ public class AlarmView extends RelativeLayout{
         time.setText(hour+":"+minute);
         amPm.setText(am ? "AM" : "PM");
 
-        location.setText(alarm.getWorkLocation().getName());
+        location.setText(alarm.getWorkLocation().getCoord().latitude + ", " + alarm.getWorkLocation().getCoord().longitude);
 
         final String[] dayNames = {"Sun" , "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 

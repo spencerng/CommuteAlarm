@@ -33,8 +33,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
+            android:value="AIzaSyBl0LxrijG720OZfGRs1vq2mTa--YF04-4"/>
         <activity android:name=".ui.EditAlarmActivity"></activity>
     </application>
 

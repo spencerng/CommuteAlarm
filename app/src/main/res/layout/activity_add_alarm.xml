@@ -8,10 +8,89 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.pennapps.xv.adoperari.ui.AddAlarmActivity">
+    tools:context="com.pennapps.xv.adoperari.ui.AddAlarmActivity"
+    android:background="#000000">
+
+    <Button
+        android:id="@+id/pickArriveTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECT ARRIVAL TIME"
+        android:padding="12dp"
+        android:layout_margin="5dp"
+        android:layout_centerHorizontal="true"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:textColor="#ffffff"
+
+        />
+    <!-- android:onClick="newTimePicker" -->
+
+    <TextView
+        android:id="@+id/showTime"
+        android:text="12:05 PM"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:padding="3dp"
+
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:textColor="#ffffff"/>
 
     <com.pennapps.xv.adoperari.ui.views.DaysOfWeekPicker
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></com.pennapps.xv.adoperari.ui.views.DaysOfWeekPicker>
+        android:layout_height="wrap_content"
+        android:id="@+id/dayPicker"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/showTime"
+        >
+    </com.pennapps.xv.adoperari.ui.views.DaysOfWeekPicker>
+
+    <Button
+        android:id="@+id/pickPlace"
+        android:onClick="newPlacePicker"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="SELECT LOCATION"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dayPicker"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"/>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_below="@id/dayPicker"
+        android:layout_marginLeft="30dp"
+        android:layout_margin="5dp"
+        android:textColor="#ffffff"
+        android:id="@+id/locationDisplay"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <NumberPicker
+        android:id="@+id/pickPrepTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationDisplay"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        >
+    </NumberPicker>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finish"
+        android:layout_centerHorizontal="true"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:text="FINISH"
+        android:layout_below="@id/pickPrepTime"
+        android:enabled="false"
+        />
+
+
+
 
 </RelativeLayout>

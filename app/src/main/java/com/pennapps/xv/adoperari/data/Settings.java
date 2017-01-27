@@ -40,4 +40,18 @@ public class Settings extends PreferenceFragment{
         return sp.getInt("prepTime", 5);
     }
 
+    public void setTempHour(int tempHour){
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt("tempHour", tempHour);
+        editor.apply();
+    }
+
+    public void setTempMinute(int tempMinute){
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putInt("tempMinute", tempMinute);
+        editor.apply();
+    }
+    public int getTempMinute(){ return sp.getInt("tempMinute", 0);}
+    public int getTempHour(){ return sp.getInt("tempHour", 0);}
+
 }
