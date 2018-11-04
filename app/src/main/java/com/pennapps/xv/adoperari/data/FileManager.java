@@ -1,6 +1,7 @@
 package com.pennapps.xv.adoperari.data;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -54,6 +55,7 @@ public class FileManager {
             FileOutputStream fos = c.openFileOutput(fileName, Context.MODE_PRIVATE);
             fos.write(fileContents.getBytes());
             fos.close();
+            Log.i("tag", "file saved");
         }catch(IOException e){
             e.printStackTrace();
         }

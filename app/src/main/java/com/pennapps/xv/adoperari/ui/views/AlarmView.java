@@ -26,6 +26,7 @@ public class AlarmView extends RelativeLayout{
 
     public AlarmView(Context c, AttributeSet attrs){
         super(c, attrs);
+
         initializeViews(c);
 
     }
@@ -39,35 +40,7 @@ public class AlarmView extends RelativeLayout{
     }
 
     public void populateView(){
-        alarmEnabled.setChecked(alarm.isEnabled());
-        int hour = alarm.getTime().getHour();
-        boolean am = true;
 
-        if(hour>=12){
-            am = false;
-            if(hour!=12)
-                hour-=12;
-
-        }
-
-        String minute;
-
-        if(alarm.getTime().getMinute()<10)
-            minute = "0" + alarm.getTime().getMinute();
-        else minute = Integer.toString(alarm.getTime().getMinute());
-
-        time.setText(hour+":"+minute);
-        amPm.setText(am ? "AM" : "PM");
-
-        location.setText(alarm.getWorkLocation().getCoord().latitude + ", " + alarm.getWorkLocation().getCoord().longitude);
-
-        final String[] dayNames = {"Sun" , "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-
-        String dayString = "";
-        for(int i = 0; i < 7; i++)
-            if(alarm.getTime().getIsDayOfWeek()[i])
-                dayString+=dayNames[i]+",";
-        dayOfWeek.setText(dayString.substring(0, dayString.length()-1));
 
     }
 
@@ -81,10 +54,7 @@ public class AlarmView extends RelativeLayout{
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        time = (TextView) findViewById(R.id.timeDisplay);
-        amPm = (TextView) findViewById(R.id.amPmDisplay);
-        dayOfWeek = (TextView) findViewById(R.id.dayWeekDisplay);
-        location = (TextView) findViewById(R.id.locationDisplay);
-        alarmEnabled =  (com.rey.material.widget.Switch) findViewById(R.id.alarmEnabled);
+
+
     }
 }

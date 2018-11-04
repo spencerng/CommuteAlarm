@@ -144,7 +144,7 @@ public class AddAlarmActivity extends AppCompatActivity {
                 Place place = PlacePicker.getPlace(data, this);
                 showPlace.setText(place.getName());
                 showPlace.setVisibility(View.VISIBLE);
-                pickPlace.setVisibility(View.INVISIBLE);
+                pickPlace.setVisibility(View.GONE);
                 this.place = place;
                 finish.setEnabled(true);
             }

@@ -20,8 +20,10 @@ public class WorkLocation {
     }
 
     LatLng coord;
+    public String name;
 
     public WorkLocation(Place place){
         coord = place.getLatLng();
+        name = "" + place.getName();
     }
 }

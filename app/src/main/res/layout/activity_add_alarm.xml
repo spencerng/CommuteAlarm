@@ -10,14 +10,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.pennapps.xv.adoperari.ui.AddAlarmActivity"
     android:background="#000000">
+<com.rey.material.widget.RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true">
+
+
+    <TextView
+        android:text="Arrival time:"
+        android:textSize="20dp"
+        android:layout_margin="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        android:textColor="#ffffff"
+        android:id="@+id/arrivalTimeText"
+        />
 
     <Button
+
         android:id="@+id/pickArriveTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SELECT ARRIVAL TIME"
         android:padding="12dp"
-        android:layout_margin="5dp"
+        android:layout_below="@id/arrivalTimeText"
+
         android:layout_centerHorizontal="true"
         style="@style/Base.Widget.AppCompat.Button.Colored"
         android:textColor="#ffffff"
@@ -31,11 +52,25 @@
         android:textSize="20dp"
         android:layout_margin="5dp"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_below="@id/arrivalTimeText"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/daysActive"
+        android:layout_below="@id/pickArriveTime"
+        android:text="Days active:"
+        android:textSize="20dp"
+        android:layout_margin="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:padding="3dp"
 
         android:layout_centerHorizontal="true"
-        android:visibility="invisible"
+
         android:textColor="#ffffff"/>
 
     <com.pennapps.xv.adoperari.ui.views.DaysOfWeekPicker
@@ -43,9 +78,23 @@
         android:layout_height="wrap_content"
         android:id="@+id/dayPicker"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/showTime"
+        android:layout_below="@id/daysActive"
         >
     </com.pennapps.xv.adoperari.ui.views.DaysOfWeekPicker>
+
+    <TextView
+        android:id="@+id/locationText"
+        android:layout_below="@id/dayPicker"
+        android:text="Work location:"
+        android:textSize="20dp"
+        android:layout_margin="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+
+        android:layout_centerHorizontal="true"
+
+        android:textColor="#ffffff"/>
 
     <Button
         android:id="@+id/pickPlace"
@@ -56,30 +105,50 @@
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dayPicker"
+        android:layout_below="@id/locationText"
         android:layout_centerHorizontal="true"
         android:layout_margin="5dp"/>
 
     <TextView
-        android:layout_width="250dp"
-        android:layout_below="@id/dayPicker"
-        android:layout_marginLeft="30dp"
-        android:layout_margin="5dp"
-        android:textColor="#ffffff"
         android:id="@+id/locationDisplay"
+        android:layout_below="@id/pickPlace"
+        android:text="Days active:"
+        android:textSize="20dp"
+        android:layout_margin="2dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"/>
+        android:padding="3dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
 
+        android:textColor="#ffffff"/>
+
+
+    <TextView
+        android:id="@+id/routinetext"
+        android:layout_below="@id/locationDisplay"
+        android:text="Morning routine length (minutes)"
+        android:textSize="20dp"
+        android:layout_margin="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+
+        android:layout_centerHorizontal="true"
+
+        android:textColor="#ffffff"/>
     <NumberPicker
+
         android:id="@+id/pickPrepTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/locationDisplay"
+        android:layout_below="@id/routinetext"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         >
     </NumberPicker>
     <Button
+        android:textColor="#ffffff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/finish"
@@ -91,6 +160,5 @@
         />
 
 
-
-
+</com.rey.material.widget.RelativeLayout>
 </RelativeLayout>
